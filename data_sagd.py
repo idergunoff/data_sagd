@@ -231,7 +231,8 @@ def calculate_parameter():
         year_for_title = ''
     else:
         year_for_title = '_' + str(date_year)
-    result_tab.to_excel(ui.lineEdit_file.text()[:-4] + '_' + param_name + year_for_title + '.xlsx')
+    if ui.checkBox_save.isChecked():
+        result_tab.to_excel(ui.lineEdit_file.text()[:-4] + '_' + param_name + year_for_title + '.xlsx')
     plt.figure(figsize=(len(result_tab.index)*0.3, len(result_tab.columns)*0.17), dpi=80)
     sns.heatmap(result_tab.transpose(), linewidths=.5, linecolor='black', cmap='jet', yticklabels=1)
     plt.title((param_name + '_' + file_name)[:-4] + year_for_title)

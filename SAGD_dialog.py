@@ -69,6 +69,9 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.checkBox_all_years.setFont(font)
         self.checkBox_all_years.setObjectName("checkBox_all_years")
+        self.checkBox_save = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_save.setGeometry(QtCore.QRect(160, 150, 91, 41))
+        self.checkBox_save.setObjectName("checkBox_save")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 436, 21))
@@ -89,6 +92,7 @@ class Ui_MainWindow(object):
         self.label_year.setText(_translate("MainWindow", "Год:"))
         self.label_param.setText(_translate("MainWindow", "Параметр:"))
         self.checkBox_all_years.setText(_translate("MainWindow", "за весь период"))
+        self.checkBox_save.setText(_translate("MainWindow", "Сохранить"))
 
 
 if __name__ == "__main__":
